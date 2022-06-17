@@ -1,3 +1,4 @@
+import Head from "next/head";
 import styled from "styled-components";
 import SocialLink from "../components/SocialLink";
 
@@ -70,6 +71,9 @@ export default function Home() {
 
   return (
     <HomePage>
+      <Head>
+        <title>Adson Dev</title>
+      </Head>
       <ProfileImg
         src="/assets/profile.jpeg"
         width={100}
