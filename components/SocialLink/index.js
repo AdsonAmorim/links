@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Wrapper } from "./styles";
 
-export function SocialLink({ link }) {
+export default function SocialLink({ link }) {
   return (
     <Wrapper href={link.link}>
       <Image

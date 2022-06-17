@@ -1,6 +1,5 @@
-import Image from "next/image";
 import styled from "styled-components";
-import { SocialLink } from "../components/SocialLink";
+import SocialLink from "../components/SocialLink";
 
 const HomePage = styled.div`
   background-color: #121214;
