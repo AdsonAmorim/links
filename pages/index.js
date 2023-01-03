@@ -45,30 +45,7 @@ const ProfileImg = styled.img`
   border-radius: 120px;
 `;
 
-export default function Home() {
-  const SocialLinks = [
-    {
-      name: "Github",
-      icon: "github",
-      link: "https://github.com/AdsonAmorim",
-    },
-    {
-      name: "Discord",
-      icon: "discord",
-      link: "https://discord.com/users/643069973480079361",
-    },
-    {
-      name: "LinkedIn",
-      icon: "linkedin",
-      link: "https://www.linkedin.com/in/adson-amorim/",
-    },
-    {
-      name: "Instagram",
-      icon: "instagram",
-      link: "https://www.instagram.com/_adsonamorim/",
-    },
-  ];
-
+export default function Home({ SocialLinks }) {
   return (
     <HomePage>
       <Head>
@@ -91,4 +68,33 @@ export default function Home() {
       <p className="footer">Feito com ♥️ por Adson</p>
     </HomePage>
   );
+}
+
+export async function getStaticProps(context) {
+  return {
+    props: {
+      SocialLinks: [
+        {
+          name: "Github",
+          icon: "github",
+          link: "https://github.com/AdsonAmorim",
+        },
+        {
+          name: "Discord",
+          icon: "discord",
+          link: "https://discord.com/users/643069973480079361",
+        },
+        {
+          name: "LinkedIn",
+          icon: "linkedin",
+          link: "https://www.linkedin.com/in/adson-amorim/",
+        },
+        {
+          name: "Instagram",
+          icon: "instagram",
+          link: "https://www.instagram.com/_adsonamorim/",
+        },
+      ],
+    },
+  };
 }
